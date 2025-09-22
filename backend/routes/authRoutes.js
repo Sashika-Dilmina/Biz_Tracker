@@ -1,5 +1,5 @@
 const express = require("express");
-const {Protect} = require("../middleware/authMiddleware");
+const {protect} = require("../middleware/authMiddleware");
 
 
 const {
@@ -16,7 +16,7 @@ router.post("/register", registerUser);
 
 router.post("/login", loginUser);
 
-router.get("/getUser", Protect, getUserInfo);
+router.get("/getUser", protect, getUserInfo);
 
 router.post("/upload-image", upload.single("image"), (req,res) => {
     if (!req.file) {
