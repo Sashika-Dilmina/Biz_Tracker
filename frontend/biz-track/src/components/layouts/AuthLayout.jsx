@@ -7,7 +7,7 @@ const AuthLayout = ({children}) => {
 
         <div className='w-screen h-screen md:w-[60vw] px-12 pt-8 pb-12'>
             <h2 className='text-xl  font-bold text-black'>
-                Biz Track
+                Biz Tracker
             </h2>
             {children}
 

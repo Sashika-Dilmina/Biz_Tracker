@@ -13,6 +13,7 @@ const TransactionInfocard = ({
         amount,
         type,
         hideDeleteBtn,
+        onDelete,
 
 }) => {
 

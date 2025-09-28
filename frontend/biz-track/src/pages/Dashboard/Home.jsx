@@ -73,7 +73,7 @@ const Home = () => {
         <InfoCard
           icon = {<LuHandCoins />}
           label = "Total Expense"
-          value={addThousandsSeparator(dashboarData?.totalExpense || 0)}
+          value={addThousandsSeparator(dashboarData?.totalExpenses || 0)}
           color="bg-red-500"
           />
 
@@ -100,11 +100,11 @@ const Home = () => {
                 data={dashboarData?.last30DaysExpenses?.transactions || []}
                 /> 
                 <RecentIncomeWithChart
-                   data={dashboarData?. transactions?.slice(0,4) || [] }
-                   totalIncome={dashboarData?.totalIncome ||0}
-                   />
+                  data={dashboarData?.last60DaysIncome?.transactions?.slice(0,4) || []}
+                  totalIncome={dashboarData?.totalIncome || 0}
+                  />
 
-                   <RecentIncome 
+                 <RecentIncome 
                      transactions = {dashboarData?.last60DaysIncome?.transactions || []}
                      onSeeMore={() => navigate("/income")}
                   />

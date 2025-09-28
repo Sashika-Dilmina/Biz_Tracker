@@ -9,7 +9,7 @@ const RecentIncomeWithChart = ({data, totalIncome}) => {
 
     const prepareChartData = () =>{
         const dataArr= data?.map((item)=> ({
-            category:item?.source,  /////
+            name:item?.source,  /////
             amount: item?.amount,
         }));
 
